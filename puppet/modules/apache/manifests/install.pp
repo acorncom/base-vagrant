@@ -11,11 +11,17 @@ class apache::install ( $server_name, $document_root, $logs_dir ) {
         ],
     }
 
-    # Install the apache2 package (designed to run each vhost as a user http://mpm-itk.sesse.net)
-    package { "apache2-mpm-itk":
+    # Install the apache2 package
+    package { "apache2":
         name    => "apache2",
         ensure  => latest,
         require => Class['server'],
+    }
+
+    # Install apache2-mpm-itk (designed to run each vhost as a user http://mpm-itk.sesse.net)
+    exec { "apache2-mpm-itk":
+        command => "sudo apt-get -y install apache2-mpm-itk",
+        require => Package['apache2'],
     }
 
     # The shell of www-data
