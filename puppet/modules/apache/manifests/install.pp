@@ -58,7 +58,7 @@ class apache::install ( $server_name, $document_root, $logs_dir ) {
 
     # Disable 000-default vhost
     exec { "Disable 000-default":
-        onlyif  => "test -f /etc/apache2/sites-enabled/000-default",
+        onlyif  => "test -f /etc/apache2/sites-enabled/000-default.conf",
         command => "a2dissite 000-default",
         require => [ Package['apache2'] ],
         notify  => Class['apache::service'],
