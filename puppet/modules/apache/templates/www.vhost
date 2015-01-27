@@ -9,8 +9,8 @@
     #php_value error_log /path/php.log
 
     <Directory <%= @document_root %>>
-        Order allow,deny
-        Allow from all
+        # dangerous in production
+        Require all granted
         AllowOverride All
         Options all
     </Directory>
