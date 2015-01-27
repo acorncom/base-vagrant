@@ -70,6 +70,7 @@ Are installed:
 * apache-mpm-itk (with yii2 virtualhost)
 * mysql-server (with custom my.cnf)
 * mysql-client
+* phpmyadmin (available at [http://www.box.dev/phpmyadmin](http://www.box.dev/phpmyadmin)
 * php5 (and the following modules)
     - bcmatch
     - bz2
