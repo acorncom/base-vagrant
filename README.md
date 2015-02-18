@@ -39,7 +39,7 @@ With the information below you can connect to the MySQL server running on the vi
 
 ### Import database
 
-If file exists `database.sql.gz` in the main directory (where the Vagrantfile is), puppet will import the database during the first `up`.
+If file exists `database.sql.gz` in the dbdump directory, puppet will import the database during the first `up`.
 
 ## Virtualhost
 
@@ -70,6 +70,7 @@ Are installed:
 * apache-mpm-itk (with yii2 virtualhost)
 * mysql-server (with custom my.cnf)
 * mysql-client
+* phpmyadmin (available at [http://www.box.dev/phpmyadmin](http://www.box.dev/phpmyadmin)
 * php5 (and the following modules)
     - bcmatch
     - bz2

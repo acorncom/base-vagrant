@@ -9,13 +9,13 @@
     #php_value error_log /path/php.log
 
     <Directory <%= @document_root %>>
-        Order allow,deny
-        Allow from all
+        # dangerous in production
+        Require all granted
         AllowOverride All
         Options all
     </Directory>
 
-    SetEnv CAKE_ENV dev
+    SetEnv YII_ENV dev
 
     AssignUserId vagrant vagrant
 
@@ -45,6 +45,6 @@
 
     AssignUserId vagrant vagrant
 
-    SetEnv CAKE_ENV dev
+    SetEnv YII_ENV dev
 
 </VirtualHost>
