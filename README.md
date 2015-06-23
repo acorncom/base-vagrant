@@ -39,7 +39,7 @@ With the information below you can connect to the MySQL server running on the vi
 
 ### Import database
 
-If file exists `database.sql.gz` in the dbdump directory, puppet will import the database during the first `up`.
+If file exists `database.sql.gz` in the dbdump directory, puppet will import the database during the first `up`.  In addition, if you delete the main database in the VM and then run `vagrant provision` again, you will get a fresh DB installed easily.
 
 ## Virtualhost
 
