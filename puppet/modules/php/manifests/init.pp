@@ -49,6 +49,14 @@ class php () {
         require => [ Package['php5'], Class['server'], Package['apache2'], Package['mysql-server'] ],
     }
 
+    # Enable php5-mcrypt at startup
+    exec { "enablemcrypt":
+        path => [ "/bin/", "/sbin/" , "/usr/bin/", "/usr/sbin/" ],
+        command => "php5enmod mcrypt",
+        notify => Service["apache2"],
+        require => Package["php5-common"],
+    }
+
     # APC
     # package { 'php-apc':
     #     ensure  => latest,
