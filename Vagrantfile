@@ -60,6 +60,8 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
         "db_name"           => "dbname",
         "db_name_tests"     => "dbname_tests",
         "document_root"     => "/var/www",
+        "env_key"           => "YII_ENV",
+        "env_key_value"     => "dev",
         "logs_dir"          => "/var/www/logs",
     }
   end

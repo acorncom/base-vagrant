@@ -1,4 +1,4 @@
-class apache::install ( $server_name, $document_root, $logs_dir ) {
+class apache::install ( $server_name, $document_root, $logs_dir, $env_key, $env_key_value ) {
 
     Exec {
         path => [

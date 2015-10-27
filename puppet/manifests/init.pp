@@ -21,7 +21,9 @@ class { "server":
 class { "apache":
     server_name     => "${server::hostname}",
     document_root   => "${document_root}",
-    logs_dir        => "${logs_dir}"
+    logs_dir        => "${logs_dir}",
+    env_key         => "${env_key}",
+    env_key_value   => "${env_key_value}",
 }
 
 # MySQL
